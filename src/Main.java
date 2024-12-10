@@ -14,24 +14,28 @@ public class Main {
             int ordenado = desordenado - 1;
 
             while (ordenado >= 0 && vetor[ordenado] > numeroSelecionado) {
-                vetor [ordenado + 1] = vetor [ordenado];
-                ordenado --;
+                vetor[ordenado + 1] = vetor[ordenado];
+
+                ordenado--;
 
             }
 
-            vetor [ordenado + 1] = numeroSelecionado;
 
+            vetor[ordenado + 1] = numeroSelecionado;
 
+            System.out.print(desordenado + " = ");
+            imprimirVetor(vetor);
         }
-        System.out.print("\nVetor Ordenado = ");
-        imprimirVetor (vetor);
-
-
+        System.out.print("Vetor Ordenado = ");
+        imprimirVetor(vetor);
     }
-    public static void imprimirVetor(int [] vetor){
+
+    public static void imprimirVetor(int[] vetor) {
         for (int i : vetor) {
             System.out.print(i + " ");
+
         }
+        System.out.print("\n");
     }
 
 }
